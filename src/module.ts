@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url'
 import { defu } from 'defu'
 import { Config } from '@medusajs/medusa-js'
 
-export type ModuleOptions = Config & { global?: boolean }
+export type ModuleOptions = Config & { global?: boolean, server: boolean }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -13,7 +13,8 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     baseUrl: 'http://localhost:9000',
     maxRetries: 3,
-    global: true
+    global: true,
+    server: false,
   },
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
@@ -31,5 +32,17 @@ export default defineNuxtModule<ModuleOptions>({
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
     addImportsDir(resolver.resolve(runtimeDir, 'composables'))
+
+    if (options.server) {
+      nuxt.hook('nitro:config', (nitroConfig) => {
+        nitroConfig.alias = nitroConfig.alias || {}
+
+        // Inline module runtime in Nitro bundle
+        nitroConfig.externals = defu(typeof nitroConfig.externals === 'object' ? nitroConfig.externals : {}, {
+          inline: [resolver.resolve('./runtime')]
+        })
+        nitroConfig.alias['#medusa/server'] = resolver.resolve(runtimeDir, './server/services')
+      })
+    }
   }
 })

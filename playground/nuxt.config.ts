@@ -12,10 +12,12 @@ export default defineNuxtConfig({
     port: 8000
   },
   modules: ['../src/module'],
-  // medusa: {
+  medusa: {
   //   baseUrl: 'http://localhost:9000',
   //   apiKey: 'test',
   //   publishableApiKey: 'test',
   //   maxRetries: 3
-  // }
+  //   global: false
+    server: true
+  }
 })
