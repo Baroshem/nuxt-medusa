@@ -6,7 +6,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-Medusa module for Nuxt.
+[Medusa](https://medusajs.com) module for Nuxt.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 - [📖 &nbsp;Documentation](https://nuxt-medusa.vercel.app)
