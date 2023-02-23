@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-medusa-docs",
+  "version": "1.0.0",
+  "description": "Medusa module for Nuxt: the docs.",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi build",
+    "preview": "nuxi preview"
+  },
+  "author": "Jakub Andrzejewski",
+  "license": "MIT",
+  "homepage": "https://nuxt-medusa.vercel.app",
+  "devDependencies": {
+    "@nuxt-themes/docus": "^1.8.1",
+    "@nuxthq/studio": "^0.7.2",
+    "@nuxtjs/plausible": "^0.2.0",
+    "nuxt": "^3.2.0"
+  }
+}

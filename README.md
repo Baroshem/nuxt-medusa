@@ -14,7 +14,7 @@ Medusa module for Nuxt.
 - Nuxt 3 ready
 - Wrapper around `@medusajs/medusa-js`
 - Handy composables like `useMedusaClient`
-- Usage in API server routes
+- Usage in API server routes with `serverMedusaClient`
 - TypeScript support
 
 ## Quick Setup
