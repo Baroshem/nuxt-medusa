@@ -4,44 +4,53 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-My new Nuxt module for doing amazing things.
+Medusa module for Nuxt.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [📖 &nbsp;Documentation](https://nuxt-medusa.vercel.app)
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Nuxt 3 ready
+- Wrapper around `@medusajs/medusa-js`
+- Handy composables like `useMedusaClient`
+- Usage in API server routes
+- TypeScript support
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `nuxt-medusa` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D my-module
+pnpm add -D nuxt-medusa
 
-# Using yarn
-yarn add --dev my-module
+yarn add --dev nuxt-medusa
 
-# Using npm
-npm install --save-dev my-module
+npm install --save-dev nuxt-medusa
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `nuxt-medusa` to the `modules` section of `nuxt.config.ts`:
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    'my-module'
-  ]
+  modules: ['nuxt-medusa'],
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+3. Create .env file with following `MEDUSA_URL` variable:
+
+```bash
+MEDUSA_URL=<YOUR_MEDUSA_URL> # By default http://localhost:9000
+```
+
+And that's it! You can now use `nuxt-medusa` in your Nuxt app ✨
+
+```vue
+<script setup lang="ts">
+const client = useMedusaClient();
+const products = await client.products.list();
+</script>
+```
 
 ## Development
 
@@ -70,11 +79,11 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-medusa/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/nuxt-medusa
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/nuxt-medusa
 
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[license-src]: https://img.shields.io/npm/l/nuxt-medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/nuxt-medusa

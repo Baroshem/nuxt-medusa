@@ -16,14 +16,15 @@ export default defineNuxtModule<ModuleOptions>({
     global: true
   },
   setup (options, nuxt) {
+    const resolver = createResolver(import.meta.url)
+
     nuxt.options.runtimeConfig.public.medusa = defu(nuxt.options.runtimeConfig.public.medusa, {
-      baseUrl: options.baseUrl,
+      baseUrl: process.env.MEDUSA_URL || options.baseUrl,
       maxRetries: options.maxRetries,
       apiKey: options.apiKey,
       publishableApiKey: options.publishableApiKey,
       global: options.global
     })
-    const resolver = createResolver(import.meta.url)
 
     if (options.global) addPlugin(resolver.resolve('./runtime/plugin'))
 

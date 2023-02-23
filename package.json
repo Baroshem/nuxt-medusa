@@ -1,7 +1,7 @@
 {
   "name": "nuxt-medusa",
   "version": "0.1.0",
-  "description": "My new Nuxt module",
+  "description": "Medusa module for Nuxt",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -15,6 +15,13 @@
   "types": "./dist/types.d.ts",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "medusa",
+    "nuxt",
+    "vue",
+    "module",
+    "e-commerce"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
