@@ -20,6 +20,7 @@
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
+    "medusa": "cd medusa && yarn start",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
@@ -27,6 +28,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
+    "@medusajs/medusa-js": "^1.3.10",
     "@nuxt/kit": "^3.2.2"
   },
   "devDependencies": {

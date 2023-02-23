@@ -4,5 +4,9 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+const client = useMedusaClient()
+console.log(client)
+const products = await client.products.list()
+console.log(products)
 </script>
