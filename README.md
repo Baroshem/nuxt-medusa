@@ -50,6 +50,8 @@ And that's it! You can now fetch data from Medusa in Nuxt ✨
 </script>
 ```
 
+If you are encountering problems with `CORS` from Medusa, make sure that `process.env.STORE_CORS` in `medusa-config.js` file is pointing to your local Nuxt project. By default, Medusa has CORS set for `http://localhost:8000` while Nuxt is running by default on `http://localhost:3000`
+
 ## Development
 
 ```bash

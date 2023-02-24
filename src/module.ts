@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addImportsDir, extendViteConfig } from '@nuxt/kit'
 import { fileURLToPath } from 'url'
 import { defu } from 'defu'
 import { Config } from '@medusajs/medusa-js'
@@ -31,6 +31,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
+    extendViteConfig((config) => {
+      config.optimizeDeps = config.optimizeDeps || {}
+      config.optimizeDeps.include = config.optimizeDeps.include || []
+      config.optimizeDeps.include.push('@medusajs/medusa-js', 'axios')
+    })
     addImportsDir(resolver.resolve(runtimeDir, 'composables'))
 
     if (options.server) {
