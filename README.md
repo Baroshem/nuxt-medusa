@@ -24,11 +24,7 @@
 1. Add `nuxt-medusa` dependency to your project
 
 ```bash
-pnpm add -D nuxt-medusa
-
-yarn add --dev nuxt-medusa
-
-npm install --save-dev nuxt-medusa
+npm install --save-dev nuxt-medusa # pnpm or yarn
 ```
 
 2. Add `nuxt-medusa` to the `modules` section of `nuxt.config.ts`:
@@ -45,12 +41,12 @@ export default defineNuxtConfig({
 MEDUSA_URL=<YOUR_MEDUSA_URL> # By default http://localhost:9000
 ```
 
-And that's it! You can now use `nuxt-medusa` in your Nuxt app ✨
+And that's it! You can now fetch data from Medusa in Nuxt ✨
 
 ```vue
 <script setup lang="ts">
-const client = useMedusaClient();
-const products = await client.products.list();
+  const client = useMedusaClient();
+  const products = await client.products.list();
 </script>
 ```
 
@@ -58,26 +54,26 @@ const products = await client.products.list();
 
 ```bash
 # Install dependencies
-npm install
+yarn
 
 # Generate type stubs
-npm run dev:prepare
+yarn dev:prepare
 
 # Develop with the playground
-npm run dev
+yarn dev
 
 # Build the playground
-npm run dev:build
+yarn dev:build
 
 # Run ESLint
-npm run lint
+yarn lint
 
 # Run Vitest
-npm run test
-npm run test:watch
+yarn test
+yarn test:watch
 
 # Release new version
-npm run release
+yarn release
 ```
 
 <!-- Badges -->
