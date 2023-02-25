@@ -22,7 +22,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.runtimeConfig.public.medusa = defu(nuxt.options.runtimeConfig.public.medusa, {
       baseUrl: process.env.MEDUSA_URL || options.baseUrl,
       maxRetries: options.maxRetries,
-      apiKey: options.apiKey,
+      apiKey: process.env.API_KEY || options.apiKey,
       publishableApiKey: options.publishableApiKey,
       global: options.global
     })
