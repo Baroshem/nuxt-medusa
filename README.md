@@ -35,9 +35,10 @@ export default defineNuxtConfig({
 })
 ```
 
-3. Create .env file with following `MEDUSA_URL` variable:
+3. Create .env file with following Medusa's variables:
 
 ```bash
+API_KEY=<YOUR_API_KEY>
 MEDUSA_URL=<YOUR_MEDUSA_URL> # By default http://localhost:9000
 ```
 
