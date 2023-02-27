@@ -9,7 +9,7 @@
 [Medusa](https://medusajs.com) module for Nuxt.
 
 - [✨ &nbsp;Release Notes](https://github.com/baroshem/nuxt-medusa/releases)
-- [▶️ Play online](https://stackblitz.com/github/baroshem/nuxt-medusa?file=.stackblitz%2Fnuxt.config.ts)
+- [▶️  &nbsp;Play online](https://stackblitz.com/github/baroshem/nuxt-medusa?file=.stackblitz%2Fnuxt.config.ts)
 - [📖 &nbsp;Documentation](https://nuxt-medusa.vercel.app)
 
 ## Features
