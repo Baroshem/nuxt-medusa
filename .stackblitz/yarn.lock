@@ -3029,13 +3029,14 @@ nuxi@3.2.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-medusa@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/nuxt-medusa/-/nuxt-medusa-0.2.6.tgz#9e90635f3b59bd62ea236741d6a5512d96caa764"
-  integrity sha512-+HU7JgWOB04FMwi11QQBIcgPVmO+3VyQRfKr9odTgK82m5uDGaTTX6Re/sPtzXbRb1FfmKuGymq+VgrkgFJorQ==
+nuxt-medusa@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/nuxt-medusa/-/nuxt-medusa-0.3.2.tgz#0c29f0d1e0d8ceefe41319a0d28f391a2ebf9c4b"
+  integrity sha512-5GxiVisjy7tdZsWs8JjDDaX4Pj98wf1fwMgI/ii2xTldU6eS0YezjV9aQkdObz4C6PMuHsqFdZvDNI1eM1A/Qw==
   dependencies:
     "@medusajs/medusa-js" "^1.3.10"
     "@nuxt/kit" "^3.2.2"
+    defu "^6.1.2"
 
 nuxt@3.2.2:
   version "3.2.2"
