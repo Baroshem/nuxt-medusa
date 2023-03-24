@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   },
   modules: ['nuxt-medusa'],
   medusa: {
-    baseUrl: 'https://api-demo.medusa-commerce.com' // Or use .env with `MEDUSA_URL`
+    baseUrl: 'https://api-demo.medusa-commerce.com', // Or use .env with `MEDUSA_URL`
+    server: true
   }
 });

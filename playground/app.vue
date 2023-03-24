@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const client = useMedusaClient();
 const { products } = await client.products.list();
-const { products: productsFromServer } = await $fetch('/api/products')
+const { data } = await useFetch('/api/products')
 </script>
 
 <template>
@@ -26,7 +26,7 @@ const { products: productsFromServer } = await $fetch('/api/products')
   </div>
   <h2 class="text-2xl">Products fetched from Server</h2>
   <div class="flex">
-    <div v-for="product in productsFromServer" class="mx-2">
+    <div v-for="product in data?.products" class="mx-2">
       <div class="relative rounded-lg shadow-lg">
         <img
           :src="product.thumbnail"
