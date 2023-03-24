@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, addImportsDir, extendViteConfig } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addImportsDir, extendViteConfig, addTemplate } from '@nuxt/kit'
 import { fileURLToPath } from 'url'
 import { defu } from 'defu'
 import { Config } from '@medusajs/medusa-js'
@@ -31,7 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
-    nuxt.options.build.transpile.push("@medusajs/medusa-js", "axios", "qs");
+    nuxt.options.build.transpile.push("@medusajs/medusa-js");
 
     extendViteConfig((config) => {
       config.optimizeDeps = config.optimizeDeps || {}
@@ -51,5 +51,18 @@ export default defineNuxtModule<ModuleOptions>({
         nitroConfig.alias['#medusa/server'] = resolver.resolve(runtimeDir, './server/services')
       })
     }
+
+    addTemplate({
+      filename: 'types/medusa.d.ts',
+      getContents: () => [
+        'declare module \'#medusa/server\' {',
+        `  const serverMedusaClient: typeof import('${resolver.resolve('./runtime/server/services')}').serverMedusaClient`,
+        '}'
+      ].join('\n')
+    })
+
+    nuxt.hook('prepare:types', (options) => {
+      options.references.push({ path: resolver.resolve(nuxt.options.buildDir, 'types/medusa.d.ts') })
+    })
   }
 })
