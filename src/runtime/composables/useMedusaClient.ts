@@ -9,11 +9,9 @@ export const useMedusaClient = (): Medusa => {
   // If medusa was registered in global plugin, just return reference to it.
   if (config.global) return nuxtApp.$medusa
 
-  const { private: privateConfig } = useRuntimeConfig()
-
   // Create client if it is not there.
   if (!nuxtApp._medusaClient) {
-    nuxtApp._medusaClient = new Medusa({ ...config, ...privateConfig })
+    nuxtApp._medusaClient = new Medusa(config)
   }
 
   return nuxtApp._medusaClient
