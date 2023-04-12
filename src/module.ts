@@ -19,7 +19,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    nuxt.options.runtimeConfig.medusa = defu(nuxt.options.runtimeConfig.medusa, {
+    nuxt.options.runtimeConfig.private = defu(nuxt.options.runtimeConfig.private, {
       apiKey: options.apiKey
     })
 
