@@ -19,10 +19,13 @@ export default defineNuxtModule<ModuleOptions>({
   setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
+    nuxt.options.runtimeConfig.private = defu(nuxt.options.runtimeConfig.private, {
+      apiKey: options.apiKey
+    })
+
     nuxt.options.runtimeConfig.public.medusa = defu(nuxt.options.runtimeConfig.public.medusa, {
       baseUrl: process.env.MEDUSA_URL || options.baseUrl,
       maxRetries: options.maxRetries,
-      apiKey: options.apiKey,
       publishableApiKey: options.publishableApiKey,
       global: options.global
     })
