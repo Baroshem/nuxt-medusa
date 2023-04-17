@@ -11,6 +11,6 @@
     "nuxt": "3.3.1"
   },
   "dependencies": {
-    "nuxt-medusa": "^0.3.4"
+    "nuxt-medusa": "^0.4.0"
   }
 }

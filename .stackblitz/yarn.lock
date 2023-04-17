@@ -3125,10 +3125,10 @@ nuxi@3.3.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-medusa@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/nuxt-medusa/-/nuxt-medusa-0.3.4.tgz#9f93ec3586a7b55e366f255a7989c1e97d2b9a12"
-  integrity sha512-fVt9DXO++F0XrFYEUCzd42ZPzO38HuuSz8DMXM3arHAxw+s46hujbajVWu4bV5tEeGCBa4GqO5MEo5/CHTyDTg==
+nuxt-medusa@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nuxt-medusa/-/nuxt-medusa-0.4.0.tgz#311224cdb8300cd90f1e992d98dadf2ead27d36a"
+  integrity sha512-lBjPMHc+kAWA2X4XJyv0Sipi2kb1NtMB8c+4vANIgTHLEPH69dq03bx9WYwb+1XtR97ot7Rha0C10ZMOjqbMWQ==
   dependencies:
     "@medusajs/medusa-js" "^1.3.10"
     "@nuxt/kit" "^3.2.2"
