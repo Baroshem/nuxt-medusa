@@ -8,7 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.3.1"
+    "nuxt": "3.4.3"
   },
   "dependencies": {
     "nuxt-medusa": "^0.4.0"
