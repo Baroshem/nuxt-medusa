@@ -1,4 +1,4 @@
-# nuxt-medusa
+# Nuxt Medusa
 
 [![nuxt-medusa](./docs/public/cover.jpeg)](https://nuxt-medusa.vercel.app)
 
