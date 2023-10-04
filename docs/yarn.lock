@@ -865,7 +865,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nuxt-themes/docus@^1.8.1":
+"@nuxt-themes/docus@1.8.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@nuxt-themes/docus/-/docus-1.8.1.tgz#96f9bab331e32743cf0d3fb6cdd09fdd3045448b"
   integrity sha512-UrsqD24e5hewHKDvqfgDNV0I6dGpKieaZoUG7aaCPP0glAqNlWMw8SFHlM7KFBx9iREmWed1XxCkN7wAcJPIUQ==
@@ -1162,19 +1162,6 @@
     socket.io-client "^4.5.4"
     ufo "^1.0.1"
 
-"@nuxthq/studio@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@nuxthq/studio/-/studio-0.7.2.tgz#1117a7a0863d0e046aae55765e2f2b9e0952b133"
-  integrity sha512-8TRUJra53nl+P3XyjcHUKOh/nFo+6MqCy+OXqscKG7MuY8DZ9GNKO8mIIMkyjwseJTGPhSDNqVAsHiHQ0SFfwQ==
-  dependencies:
-    "@nuxt/kit" "^3.0.0"
-    "@nuxt/schema" "^3.0.0"
-    defu "^6.1.1"
-    nuxt-component-meta "^0.4.3"
-    nuxt-config-schema "^0.4.2"
-    socket.io-client "^4.5.4"
-    ufo "^1.0.1"
-
 "@nuxtjs/color-mode@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-3.2.0.tgz#b5b6a3931a6ddd9646c3aad121d357c635792eb7"
@@ -1184,7 +1171,7 @@
     lodash.template "^4.5.0"
     pathe "^1.0.0"
 
-"@nuxtjs/plausible@^0.2.0":
+"@nuxtjs/plausible@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/plausible/-/plausible-0.2.0.tgz#07a2c41c2c1cfdfb4578dd5885405a0b4c4ba397"
   integrity sha512-mke+eW94PCca7zK0kNpNA9ULat5JCrBP2JUCmas6ZKpskU3+IaBv2OzWYzWJb/SsungfV9a/dukKbjAJeBTzhQ==
@@ -4923,7 +4910,7 @@ nuxt-icon@^0.2.10:
     "@nuxt/kit" "^3.1.0"
     nuxt-config-schema "^0.4.4"
 
-nuxt@^3.2.0:
+nuxt@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.2.0.tgz#d952f8d2c2776a74656b80cc72a6533b56c0ad6c"
   integrity sha512-8jAYyjU1Ht+MXPLLDIdIUmV56KiI0g7KusKwzvqn+vlzyCNtSHg2W/VBCGw5QWplb/MXruogcMl2sDenlQRZFg==
