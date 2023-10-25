@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   modules: ['../src/module'],
   medusa: {
-    //   baseUrl: 'http://localhost:9000',
+      baseUrl: 'https://production-like-starter.herokuapp.com',
     //   apiKey: 'test',
     //   publishableApiKey: 'test',
     //   maxRetries: 3
