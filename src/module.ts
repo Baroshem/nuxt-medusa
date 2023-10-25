@@ -1,7 +1,7 @@
 import { defineNuxtModule, addPlugin, createResolver, addImportsDir, extendViteConfig, addTemplate } from '@nuxt/kit'
 import { fileURLToPath } from 'url'
 import { defu } from 'defu'
-import { Config } from '@medusajs/medusa-js'
+import type { Config } from '@medusajs/medusa-js'
 
 export type ModuleOptions = Config & { global?: boolean, server: boolean }
 
@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     global: true,
     server: false,
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
     nuxt.options.runtimeConfig.private = defu(nuxt.options.runtimeConfig.private, {

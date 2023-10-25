@@ -13,11 +13,12 @@ export default defineNuxtConfig({
   },
   modules: ['../src/module'],
   medusa: {
-  //   baseUrl: 'http://localhost:9000',
-  //   apiKey: 'test',
-  //   publishableApiKey: 'test',
-  //   maxRetries: 3
-  //   global: false
+    //   baseUrl: 'http://localhost:9000',
+    //   apiKey: 'test',
+    //   publishableApiKey: 'test',
+    //   maxRetries: 3
+    //   global: false
     server: true
-  }
+  },
+  devtools: { enabled: true }
 })
