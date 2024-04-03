@@ -26,7 +26,7 @@
 1. Add `nuxt-medusa` dependency to your project
 
 ```bash
-npm install --save-dev nuxt-medusa # pnpm or yarn
+npx nuxi@latest module add medusa
 ```
 
 2. Add `nuxt-medusa` to the `modules` section of `nuxt.config.ts`:
