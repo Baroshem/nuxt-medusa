@@ -26,18 +26,10 @@
 1. Add `nuxt-medusa` dependency to your project
 
 ```bash
-npm install --save-dev nuxt-medusa # pnpm or yarn
+npx nuxi@latest module add medusa
 ```
 
-2. Add `nuxt-medusa` to the `modules` section of `nuxt.config.ts`:
-
-```js
-export default defineNuxtConfig({
-  modules: ['nuxt-medusa'],
-})
-```
-
-3. Create .env file with following `MEDUSA_URL` variable:
+2. Create .env file with following `MEDUSA_URL` variable:
 
 ```bash
 MEDUSA_URL=<YOUR_MEDUSA_URL> # By default http://localhost:9000
