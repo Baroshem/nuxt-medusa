@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 const client = useMedusaClient();
-const { products } = await client.products.list();
+// Client fetching
+const { regions } = await client.regions.list()
+const { products } = await client.products.list({
+  region_id: regions[0].id,
+  country_code: regions[0].countries[0].iso_2,
+  fields: `*variants.calculated_price`
+});
+// Server Fetching
 const { data } = await useFetch('/api/products')
 </script>
 
@@ -25,7 +32,7 @@ const { data } = await useFetch('/api/products')
               {{ product.title }}
             </h5>
             <pre class="text-gray-500 mb-4">{{
-            product.variants[0].prices[0].amount
+            product.variants[0].calculated_price.calculated_amount
             }}</pre>
             <p>{{ product.description }}</p>
           </div>
@@ -51,7 +58,7 @@ const { data } = await useFetch('/api/products')
               {{ product.title }}
             </h5>
             <pre class="text-gray-500 mb-4">{{
-            product.variants[0].prices[0].amount
+            product.variants[0].calculated_price.calculated_amount
             }}</pre>
             <p>{{ product.description }}</p>
           </div>
