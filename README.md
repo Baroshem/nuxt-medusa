@@ -16,7 +16,7 @@
 ## Features
 
 - Nuxt 3 ready
-- Wrapper around `@medusajs/medusa-js`
+- Wrapper around `@medusajs/js-sdk`
 - Handy composables like `useMedusaClient`
 - Usage in API server routes with `serverMedusaClient`
 - TypeScript support
@@ -40,7 +40,7 @@ And that's it! You can now fetch data from Medusa in Nuxt ✨
 ```vue
 <script setup lang="ts">
   const client = useMedusaClient();
-  const { products } = await client.products.list();
+  const { products } = await client.store.product.list();
 </script>
 ```
 
