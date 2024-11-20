@@ -1,6 +1,14 @@
 <script lang="ts" setup>
 const client = useMedusaClient();
-const { products } = await client.products.list();
+
+// Client fetching
+const { regions } = await client.store.region.list()
+const { products } = await client.store.product.list({
+  region_id: regions[0].id,
+  fields: `*variants.calculated_price`
+});
+
+// Server Fetching
 const { data } = await useFetch('/api/products')
 </script>
 
