@@ -1,4 +1,5 @@
-import Medusa from '@medusajs/medusa-js'
+import type { Config } from '@medusajs/js-sdk'
+import Medusa from '@medusajs/js-sdk'
 import { useRuntimeConfig, useNuxtApp } from '#imports'
 
 export const useMedusaClient = (): Medusa => {
@@ -11,7 +12,7 @@ export const useMedusaClient = (): Medusa => {
 
   // Create client if it is not there.
   if (!nuxtApp._medusaClient) {
-    nuxtApp._medusaClient = new Medusa(config)
+    nuxtApp._medusaClient = new Medusa(config as Config)
   }
 
   return nuxtApp._medusaClient as Medusa
