@@ -1,7 +1,7 @@
 import { defineNuxtModule, addPlugin, createResolver, addImportsDir, extendViteConfig, addTemplate } from '@nuxt/kit'
 import { fileURLToPath } from 'url'
 import { defu } from 'defu'
-import type { Config } from '@medusajs/medusa-js'
+import type { Config } from '@medusajs/js-sdk'
 
 export type ModuleOptions = Config & { global?: boolean, server: boolean }
 
@@ -11,35 +11,33 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'medusa'
   },
   defaults: {
-    baseUrl: 'http://localhost:9000',
-    maxRetries: 3,
+    baseUrl: process.env.MEDUSA_URL || 'http://localhost:9000',
     global: true,
     server: false,
+    debug: false,
+    publishableKey: "",
+    auth: {
+      type: "session",
+      jwtTokenStorageKey: "medusa_auth_token",
+      jwtTokenStorageMethod: "local"
+    },
   },
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    nuxt.options.runtimeConfig.private = defu(nuxt.options.runtimeConfig.private, {
-      apiKey: options.apiKey
-    })
-
-    nuxt.options.runtimeConfig.public.medusa = defu(nuxt.options.runtimeConfig.public.medusa, {
-      baseUrl: process.env.MEDUSA_URL || options.baseUrl,
-      maxRetries: options.maxRetries,
-      publishableApiKey: options.publishableApiKey,
-      global: options.global
-    })
+    nuxt.options.runtimeConfig.medusa = defu(nuxt.options.runtimeConfig.medusa, options)
+    nuxt.options.runtimeConfig.public.medusa = defu(nuxt.options.runtimeConfig.public.medusa, options)
 
     if (options.global) addPlugin(resolver.resolve('./runtime/plugin'))
 
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
-    nuxt.options.build.transpile.push("@medusajs/medusa-js");
+    nuxt.options.build.transpile.push("@medusajs/js-sdk");
 
     extendViteConfig((config) => {
       config.optimizeDeps = config.optimizeDeps || {}
       config.optimizeDeps.include = config.optimizeDeps.include || []
-      config.optimizeDeps.include.push('@medusajs/medusa-js', 'axios')
+      config.optimizeDeps.include.push('@medusajs/js-sdk', 'axios')
     })
     addImportsDir(resolver.resolve(runtimeDir, 'composables'))
 

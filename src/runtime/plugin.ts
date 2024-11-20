@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 import { useRuntimeConfig } from '#imports'
-import Medusa from '@medusajs/medusa-js'
+import Medusa from '@medusajs/js-sdk'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { medusa: config } = useRuntimeConfig().public
