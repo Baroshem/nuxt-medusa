@@ -1,6 +1,6 @@
 # Nuxt Medusa
 
-[![nuxt-medusa](./docs/public/cover.jpeg)](https://nuxt-medusa.vercel.app)
+[![nuxt-medusa](./docs/public/cover.png)](https://nuxt-medusa.vercel.app)
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
