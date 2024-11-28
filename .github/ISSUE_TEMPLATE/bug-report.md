@@ -11,7 +11,7 @@ Before reporting a bug, please make sure that you have read through our document
 
 ### Version
 
-nuxt-medusa <!-- ex: v0.1.0 -->
+@nuxtjs/medusa <!-- ex: v0.1.0 -->
 nuxt: <!-- ex: v2.13.0 -->
 
 ### Reproduction Link

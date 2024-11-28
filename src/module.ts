@@ -7,7 +7,7 @@ export type ModuleOptions = Config & { global?: boolean, server: boolean }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxt-medusa',
+    name: '@nuxtjs/medusa',
     configKey: 'medusa'
   },
   defaults: {

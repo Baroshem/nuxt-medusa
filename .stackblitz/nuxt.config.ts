@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  modules: ['nuxt-medusa'],
+  modules: ['@nuxtjs/medusa'],
   medusa: {
     baseUrl: 'https://api-demo.medusa-commerce.com', // Or use .env with `MEDUSA_URL`
     server: true

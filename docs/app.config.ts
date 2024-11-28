@@ -5,7 +5,7 @@ export default defineAppConfig({
     image: '/cover.jpeg',
     socials: {
       twitter: 'jacobandrewsky',
-      github: 'baroshem/nuxt-medusa'
+      github: 'nuxt-modules/medusa'
     },
     header: {
       logo: true

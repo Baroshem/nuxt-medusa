@@ -11,6 +11,6 @@
     "nuxt": "latest"
   },
   "dependencies": {
-    "nuxt-medusa": "latest"
+    "@nuxtjs/medusa": "latest"
   }
 }
