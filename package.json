@@ -1,6 +1,6 @@
 {
   "name": "nuxt-medusa",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "Medusa module for Nuxt",
   "license": "MIT",
   "type": "module",
