@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-medusa",
+  "name": "@nuxtjs/medusa",
   "version": "1.0.0",
   "description": "Medusa module for Nuxt",
   "license": "MIT",

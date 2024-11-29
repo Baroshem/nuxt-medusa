@@ -10,7 +10,7 @@
   },
   "author": "Jakub Andrzejewski",
   "license": "MIT",
-  "homepage": "https://nuxt-medusa.vercel.app",
+  "homepage": "https://medusa.nuxtjs.org",
   "devDependencies": {
     "@nuxt-themes/docus": "1.8.1",
     "@nuxtjs/plausible": "0.2.0",

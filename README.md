@@ -1,6 +1,6 @@
 # Nuxt Medusa
 
-[![nuxt-medusa](./docs/public/cover.png)](https://nuxt-medusa.vercel.app)
+[![@nuxtjs/medusa](./docs/public/cover.png)](https://medusa.nuxtjs.org)
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -8,10 +8,10 @@
 
 [Medusa](https://medusajs.com) module for Nuxt.
 
-- [▶️  &nbsp;Play online](https://stackblitz.com/github/baroshem/nuxt-medusa?file=.stackblitz%2Fnuxt.config.ts)
-- [📖 &nbsp;Documentation](https://nuxt-medusa.vercel.app)
+- [▶️  &nbsp;Play online](https://stackblitz.com/github/nuxt-modules/medusa?file=.stackblitz%2Fnuxt.config.ts)
+- [📖 &nbsp;Documentation](https://medusa.nuxtjs.org)
 - [🎥 &nbsp;Intro video](https://www.youtube.com/watch?v=EuakPz8M7CM)
-- [✨ &nbsp;Release Notes](https://github.com/baroshem/nuxt-medusa/releases)
+- [✨ &nbsp;Release Notes](https://github.com/nuxt-modules/medusa/releases)
 
 ## Features
 
@@ -23,7 +23,7 @@
 
 ## Quick Setup
 
-1. Add `nuxt-medusa` dependency to your project
+1. Add `@nuxtjs/medusa` dependency to your project
 
 ```bash
 npx nuxi@latest module add medusa
@@ -73,11 +73,11 @@ yarn release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-medusa/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/nuxt-medusa
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/medusa/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@nuxtjs/medusa
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/nuxt-medusa
+[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/medusa
 
-[license-src]: https://img.shields.io/npm/l/nuxt-medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/nuxt-medusa
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/medusa.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@nuxtjs/medusa
